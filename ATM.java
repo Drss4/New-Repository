@@ -48,3 +48,17 @@
                                 fastCashWithDraw(60.0);
                         else if (_state == ERROR_STATE)
                                 setState(ACCOUNT_STATE);
+        private class DButtonListener implements ActionListener
+        {
+                public void actionPerformed(final ActionEvent event)
+                {
+                        if (_state == ACCOUNT_STATE)
+                        {
+                            setState(START_STATE);
+                        }   
+                        else if(_state==FASTCASH_STATE)
+                                setState(ACCOUNT_STATE);
+                        else if(_state == ERROR_STATE)
+                                setState(ACCOUNT_STATE);
+                        else if(_state == TRANSACT_STATE)
+                                setState(ACCOUNT_STATE);

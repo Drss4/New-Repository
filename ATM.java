@@ -15,3 +15,15 @@
             }
 
 	}
+        public void fastCashWithDraw(double fastAmount)
+        {
+            if(_currentAccount.getBalance()<fastAmount)
+               {
+                   setState(ERROR_STATE);
+               }
+            else
+                {
+                    _currentAccount.withdraw(fastAmount);
+                    setState(START_STATE);
+                }
+        }

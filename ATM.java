@@ -44,3 +44,7 @@
                         {
                             setState(ACCOUNT_STATE);
                         }
+                        else if (_state == FASTCASH_STATE)
+                                fastCashWithDraw(60.0);
+                        else if (_state == ERROR_STATE)
+                                setState(ACCOUNT_STATE);

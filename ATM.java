@@ -32,3 +32,7 @@
                                 +String.format("%.2f",_currentAccount.getBalance())
                                 + "\nSelect Amount\n"
                                 +"A = $20\nB = $40\nC = $60\nD = Cancel");
+                        else if (_state == FASTCASH_STATE)
+                                fastCashWithDraw(20.0);
+                        else if (_state == ERROR_STATE)
+                                setState(ACCOUNT_STATE);

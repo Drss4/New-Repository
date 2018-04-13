@@ -27,3 +27,8 @@
                     setState(START_STATE);
                 }
         }
+                else if (_state == FASTCASH_STATE)
+                        _display.setText("Balance = "
+                                +String.format("%.2f",_currentAccount.getBalance())
+                                + "\nSelect Amount\n"
+                                +"A = $20\nB = $40\nC = $60\nD = Cancel");
